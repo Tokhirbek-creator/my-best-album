@@ -1,27 +1,8 @@
-/* eslint-disable react/no-this-in-sfc */
-/* eslint-disable no-unused-expressions */
 import React, { useEffect } from 'react';
 import './navbar.scss';
 
 function Navbar() {
   useEffect(() => {
-    // const sections = document.querySelectorAll('section[id]');
-    // const scrollActive = () => {
-    //   const scrollY = window.pageYOffset;
-    //   sections.forEach((current) => {
-    //     const sectionHeight = current.offsetHeight;
-    //     const sectionTop = current.offsetTop - 58;
-    //     const sectionId = current.getAttribute('id');
-    //     const sectionsClass = document.querySelector(`.nav__menu a[href*=${sectionId}]`);
-
-    //     if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-    //       sectionsClass.classList.add('active-link');
-    //     } else {
-    //       sectionsClass.classList.remove('active-link');
-    //     }
-    //   });
-    // };
-    // window.addEventListener('scroll', scrollActive);
     const navMenu = document.getElementById('nav-menu');
     const navToggle = document.getElementById('nav-toggle');
     const navClose = document.getElementById('nav-close');
@@ -66,7 +47,7 @@ function Navbar() {
               <a href="#home" className="nav__link active-link">Home</a>
             </li>
             <li className="nav__item">
-              <a href="#photos" className="nav__link">Photos</a>
+              <a href="#featured" className="nav__link">Photos</a>
             </li>
           </ul>
 

@@ -20,5 +20,8 @@ module.exports = {
   rules: {
     'react/react-in-jsx-scope': 0,
     'no-console': 0,
+    'no-shadow': 0,
+    'no-unused-expressions': 0,
+    'jsx-a11y/anchor-is-valid': 0,
   },
 };

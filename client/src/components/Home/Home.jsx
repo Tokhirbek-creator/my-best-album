@@ -17,7 +17,7 @@ function Home() {
               {' '}
               <br />
               {' '}
-              Gallery
+              Best Album
             </h1>
             <p className="home__description">
               This is where all my photos and descriptions are saved in the album.
