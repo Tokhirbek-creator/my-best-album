@@ -4,8 +4,13 @@ const {
 
 module.exports = (sequelize, DataTypes) => {
   class User extends Model {
-    static associate({ Post }) {
-      this.hasMany(Post, { foreignKey: 'user_id' });
+    /**
+     * Helper method for defining associations.
+     * This method is not a part of Sequelize lifecycle.
+     * The `models/index` file will call this method automatically.
+     */
+    static associate(models) {
+      this.hasMany(models.Photo, { foreignKey: 'user_id' });
     }
   }
   User.init({

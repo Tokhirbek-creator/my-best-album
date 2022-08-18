@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { memo } from 'react';
 import './card.scss';
 
-function Card() {
+function Card({ photos }) {
   return (
     <section className="featured section container" id="featured">
       <h2 className="section__title">
@@ -9,41 +9,22 @@ function Card() {
       </h2>
 
       <div className="featured__container grid">
-        <article className="featured__card">
+        {photos.map((photo) => (
 
-          <img src="assets/img/gallery.jpg" alt="" className="featured__img" />
+          <article key={photo.id} className="featured__card">
 
-          <div className="featured__data">
-            <h3 className="featured__title">Paris</h3>
-          </div>
+            <img src={`http://localhost:3001${photo.img}`} alt="" className="featured__img" />
 
-          <button type="button" className="button featured__button">Delete</button>
-        </article>
+            <div className="featured__data">
+              <h3 className="featured__title">{photo.title}</h3>
+            </div>
 
-        <article className="featured__card">
-
-          <img src="assets/img/gallery.jpg" alt="" className="featured__img" />
-
-          <div className="featured__data">
-            <h3 className="featured__title">My cat</h3>
-          </div>
-
-          <button type="button" className="button featured__button">Delete</button>
-        </article>
-
-        <article className="featured__card">
-
-          <img src="assets/img/gallery.jpg" alt="" className="featured__img" />
-
-          <div className="featured__data">
-            <h3 className="featured__title">Rollse-Royce</h3>
-          </div>
-
-          <button type="button" className="button featured__button">Delete</button>
-        </article>
+            <button id={photo.id} type="button" className="button featured__button">Delete</button>
+          </article>
+        ))}
       </div>
     </section>
   );
 }
 
-export default Card;
+export default memo(Card);

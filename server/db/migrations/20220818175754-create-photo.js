@@ -10,8 +10,8 @@ module.exports = {
       title: {
         type: Sequelize.STRING,
       },
-      description: {
-        type: Sequelize.TEXT,
+      img: {
+        type: Sequelize.STRING,
       },
       user_id: {
         type: Sequelize.INTEGER,
@@ -31,7 +31,7 @@ module.exports = {
       },
     });
   },
-  async down(queryInterface) {
+  async down(queryInterface, Sequelize) {
     await queryInterface.dropTable('Photos');
   },
 };

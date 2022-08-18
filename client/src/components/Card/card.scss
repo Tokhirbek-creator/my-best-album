@@ -28,6 +28,7 @@
     &__img{
         height: 214px;
         margin-bottom: var(--mb-1);
+        object-fit: contain;
     }
     &__title {
         font-size: var(--h3-font-size);
