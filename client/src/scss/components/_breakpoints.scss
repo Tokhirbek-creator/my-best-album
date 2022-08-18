@@ -15,23 +15,6 @@
             font-size: var(--smaller-font-size);
         }
     }
-
-    .story__square,
-    .story__img,
-    .testimonial__square,
-    .testimonial__img{
-        width: 180px;
-    }
-
-    .story__square,
-    .testimonial__square{
-        height: 180px;
-    }
-
-    .products__container{
-        grid-template-columns: repeat(1, 180px);
-        justify-content: center;
-    }
 }
 
 /* For medium devices */
@@ -97,64 +80,10 @@
         &__data{
             padding: 0 0 3rem 6rem;
         }
-        &__social{
-            top: 47%;
-            column-gap: 2rem;
-        }
     }
 
-    .featured__title,
-    .new__title,
-    .new__price{
+    .featured__title {
         font-size: var(--normal-font-size);
-    }
-
-    .story__container,
-    .testimonial__container,
-    .newsletter__bg{
-        grid-template-columns: repeat(2, 1fr);
-        align-items: center;
-    }
-
-    .story{
-        &__section-title{
-            text-align: initial;
-
-            &::before{
-                margin: initial;
-            }
-        }
-        &__images{
-            order: -1;
-        }
-    }
-
-    .products{
-        &__container{
-            grid-template-columns: repeat(3, 200px);
-            justify-content: center;
-            gap: 2.5rem;
-        }
-        &__card{
-            padding: 2rem 0;
-        }
-        &__img{
-            height: 155px;
-        }
-    }
-
-    .newsletter{
-        &__bg{
-            text-align: initial;
-            column-gap: 2rem;
-            padding: 4.5rem;
-        }
-        &__subscribe{
-            flex-direction: row;
-        }
-        &__input{
-            width: 100%;
-        }
     }
 
     .footer{
@@ -189,35 +118,16 @@
         }
     }
 
-    .featured__container{
-        grid-template-columns: repeat(3, 312px);
+    .featured {
+      &__container{
+        grid-template-columns: repeat(3, 350px);
         padding-top: 2rem;
-    }
+        gap: 3.5rem;
+      }
 
-    .story__container,
-    .testimonial__container{
-        column-gap: 8rem;
-    }
-
-    .story__square,
-    .story__img,
-    .testimonial__square,
-    .testimonial__img{
-        width: 450px;
-    }
-
-    .story__square,
-    .testimonial__square{
-        height: 450px;
-    }
-
-    .testimonial__container{
-        padding-bottom: 4rem;
-    }
-
-    .products__container,
-    .new__container{
-        padding-top: 2rem;
+      &__img {
+        height: 500px;
+        }
     }
 
 }
@@ -228,25 +138,17 @@
         margin-left: auto;
         margin-right: auto;
     }
-    
-    .story__container,
-    .testimonial__container{
-        column-gap: 13rem;
-    }
-    
-    .story{
-        &__container{
-            padding-top: 3rem;
-        }
-        &__img{
-            left: 5rem;
-            top: -5rem;
-        }
-    }
 
-    .testimonial__img{
-        right: 5rem;
-        top: 5rem;
+    .featured {
+      &__container {
+        grid-template-columns: repeat(3, 469px);
+        padding-top: 2rem;
+        gap: 3.5rem;
+      }
+
+      &__img {
+        height: 500px;
+        }
     }
 
     .scrollup{

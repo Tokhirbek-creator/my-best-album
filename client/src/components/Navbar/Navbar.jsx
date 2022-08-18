@@ -1,8 +1,27 @@
+/* eslint-disable react/no-this-in-sfc */
+/* eslint-disable no-unused-expressions */
 import React, { useEffect } from 'react';
 import './navbar.scss';
 
 function Navbar() {
   useEffect(() => {
+    // const sections = document.querySelectorAll('section[id]');
+    // const scrollActive = () => {
+    //   const scrollY = window.pageYOffset;
+    //   sections.forEach((current) => {
+    //     const sectionHeight = current.offsetHeight;
+    //     const sectionTop = current.offsetTop - 58;
+    //     const sectionId = current.getAttribute('id');
+    //     const sectionsClass = document.querySelector(`.nav__menu a[href*=${sectionId}]`);
+
+    //     if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+    //       sectionsClass.classList.add('active-link');
+    //     } else {
+    //       sectionsClass.classList.remove('active-link');
+    //     }
+    //   });
+    // };
+    // window.addEventListener('scroll', scrollActive);
     const navMenu = document.getElementById('nav-menu');
     const navToggle = document.getElementById('nav-toggle');
     const navClose = document.getElementById('nav-close');
@@ -24,6 +43,13 @@ function Navbar() {
       navMenus.classList.remove('show-menu');
     };
     navLink.forEach((n) => n.addEventListener('click', linkAction));
+
+    const scrollHeader = () => {
+      const header = document.getElementById('header');
+      window.scrollY >= 50 ? header.classList.add('scroll-header')
+        : header.classList.remove('scroll-header');
+    };
+    window.addEventListener('scroll', scrollHeader);
   });
 
   return (
