@@ -58,7 +58,7 @@ function App() {
     <>
       <Navbar />
       <Home handleSubmit={handleSubmit} handleInputs={handleInputs} me={me} />
-      <Card photos={photos} />
+      <Card photos={photos} setPhotos={setPhotos} />
       <Footer />
       <ScrollUp />
     </>

@@ -23,6 +23,16 @@ app.get('/photos', async (req, res) => {
   });
 });
 
+app.delete('/:id', async (req, res) => {
+  const { id } = req.params;
+  console.log(id);
+  await Photo.destroy({ where: { id } });
+  const updatePhotos = await Photo.findAll();
+  res.json({
+    content: updatePhotos,
+  });
+});
+
 app.get('/me', async (req, res) => {
   const me = await User.findOne({ where: { id: 1 } });
   res.json(me);
