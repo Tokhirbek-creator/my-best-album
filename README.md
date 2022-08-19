@@ -12,7 +12,7 @@
 
 ![sortDelete](https://user-images.githubusercontent.com/76901834/185523262-9d2b095b-582c-4b21-8c94-4112983ca745.gif)
 
-## To another devices
+## On another devices
 
 ![mobile](https://user-images.githubusercontent.com/76901834/185523339-dce15857-c5be-4cb9-a792-c262a3709095.gif)
 
