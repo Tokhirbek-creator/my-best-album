@@ -14,7 +14,8 @@
 
 ## On another devices
 
-![mobile](https://user-images.githubusercontent.com/76901834/185523339-dce15857-c5be-4cb9-a792-c262a3709095.gif)
+![Mobilee](https://user-images.githubusercontent.com/76901834/185591891-841467f6-2c18-48f1-9dc7-bb068af959b2.gif)
+
 
 ## Requirements:
 1. Node.js
